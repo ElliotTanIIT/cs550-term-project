@@ -15,7 +15,7 @@ Second, it is necessary to get to know the unique operational capabilities of th
 
 Third, the computational performance should be evaluated. The performance of a database is very essential. One database may perform variously on different types of queries. Therefore, we need to figure out for InfluxDB and TimescaleDB, which database performs better on what kind of queries. Also, the data insertion performance is an important feature, which needs to be considered in this project.
 
-Please read the official final report for more details.
+Please read the official final report for more details on how we went about solving these problems.
 
 ### Tools used
 
