@@ -1,21 +1,19 @@
 # cs550-term-project
 
-## Exploring the computational and functional capabilities of InfluxDB and TimescaleDB
+## Exploring the functional computational and capabilities of InfluxDB and TimescaleDB
 
-The goal of this project is to compare two time series databases: InfluxDB and TimescaleDB. The comparison problem of two databases can be divided into three sections. 
+The goal of this project was to compare two time series databases: InfluxDB and TimescaleDB. We compared both their functionality and computational capabilities. In order to measure their computational capabilities, we used Time Series Benchmark Suite (TSBS) and ran similar experments on the respective Time Series Databases.
 
-### Section 1
-First, the architecture of the databases need to be explored. The architecture of databases helps us to understand how data is stored, and how queries are executed in different databases. 
+InfluxDB is written in the GoLang while TimescaleDB is an extension of PostgreSQL, and both are time series databases.
 
-### Section 2
+### Functionality
+Through thorough research, we learned that InfluxDB has a large advantage in its functional capabilities due to the various packages that it contains. Although there is a steeper learning curve to using InfluxDB because of it's custom SQL-like query language, users will find that it more flexible than TimescaleDB. Some of the packages allow it to store and retireve data as json, csv, or even Http protocols. InfluxDB also has a GUI with drop down menus to help build queries, allowing newer users to familiarize themselves with InfluxDBs system. In contrast, we found TimescaleDB to lack many of the functionalities that InfluxDB offered.
 
-Second, it is necessary to get to know the unique operational capabilities of the databases. This is also an important section. As we know both InfluxDB and TimescaleDB are popular time series databases on the market. There must be some functional differences between them, and our task is to figure out their unique operation capabilities. 
+### Computational Capablity
+After running TSBS, we found InfluxDB to have much faster single host query execution than TimescaleDB. This means that when only 1 user is accessing the database, InfluxDB outperforms TimescaleDB. However, when we ran the tests for multiple hosts and last point retrieval (getting the most recent record from database), we found that TimescaleDB worked faster.
 
-### Section 3
-
-Third, the computational performance should be evaluated. The performance of a database is very essential. One database may perform variously on different types of queries. Therefore, we need to figure out for InfluxDB and TimescaleDB, which database performs better on what kind of queries. Also, the data insertion performance is an important feature, which needs to be considered in this project.
-
-Please read the official final report for more details on how we went about solving these problems.
+### Which is Better?
+In the case of data analysis, we would recommend InfluxDB for its numerous packages and flexibility in manipulating data, and its faster single host query speed. However, if a company wanted to have a storage database servicing multiple users, we would recomment TimescaleDB as it's query execution scales better with more people.
 
 ### Tools used
 
